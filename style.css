@@ -1,0 +1,221 @@
+
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+            background-color: #f9f9f9;
+        }
+
+        /* Navigation Bar */
+        nav {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 100;
+        }
+
+        nav .logo {
+            font-size: 1.5em;
+            color: #ff5a1f;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            font-size: 1em;
+            color: #333;
+            transition: color 0.3s, transform 0.3s;
+            /* Added transform to transition */
+            padding: 5px 10px;
+            /* Added padding for better clickable area */
+        }
+
+        nav ul li a:hover {
+            color: #ff5a1f;
+            transform: scale(1.1);
+            /* Subtle scale effect on hover */
+            background-color: rgba(255, 90, 31, 0.1);
+            /* Light background on hover */
+            border-radius: 5px;
+            /* Rounded corners for the background */
+        }
+
+        /* Section Styling */
+        section {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 100px;
+            position: relative;
+            overflow: hidden;
+            /* Prevent overflow */
+        }
+
+        .hero {
+            background-color: #fff;
+            padding-top: 80px;
+        }
+
+        /* Content Styling */
+        .text-content {
+            max-width: 450px;
+            font-size: 1.5em;
+            text-align: justify;
+            color: #333;
+            text-align: left;
+            opacity: 1;
+            /* Ensure opacity is set to 1 for visibility */
+            transform: translateY(0);
+            /* Set translateY to 0 */
+            transition: opacity 1s ease, transform 1s ease;
+        }
+
+        .text-content h3 {
+            font-size: 2em;
+            color: #ff5a1f;
+            margin-bottom: 20px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+        }
+
+        .text-content p {
+            font-size: 1em;
+            margin-bottom: 30px;
+            color: #555;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+        }
+
+        /* Image Styling */
+        .image-content {
+            width: 500px;
+            /* Make sure the image is appropriately sized */
+            height: 500px;
+            opacity: 1;
+            /* Ensure opacity is set to 1 for visibility */
+            transform: rotate(0deg) scale(1);
+            transition: transform 1s ease, opacity 1s ease;
+        }
+
+        .image-content img {
+            width: 100%;
+            height: 100%;
+            /* Ensure the image fills the container */
+            border-radius: 160px;
+        }
+
+        /* Button Styling */
+        .explore-btn {
+            margin-top: 15px;
+            padding: 15px 30px;
+            background-color: #ff5a1f;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            transition: background-color 0.3s;
+        }
+
+        .explore-btn:hover {
+            background-color: #e04e18;
+        }
+
+        /* Section 2 Styling */
+        .section2 {
+            background-color: white;
+            padding: 50px 0;
+            /* Add some padding */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* Center align items */
+            text-align: center;
+            /* Center text */
+        }
+
+        .image-row {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            /* Allows images to stack on smaller screens */
+            gap: 20px;
+            /* Space between images */
+        }
+
+        .image-item {
+            width: 30%;
+            /* Each image takes up 30% of the row */
+            position: relative;
+            border-radius: 50%;
+        }
+
+        /* Text Below Each Image */
+        .image-description {
+            text-align: center;
+            /* Center text */
+            align-items: center;
+            justify-content: center;
+            margin-top: 40%;
+            /* Adjusted margin for better spacing */
+            font-size: 1em;
+            color: #333;
+            max-width: 300px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            position: absolute;
+            /* Make text absolute */
+            top: 170px;
+            
+            /* Position it at the bottom of the image */
+            left: 50%;
+            /* Center horizontally */
+            transform: translateX(-50%);
+            /* Adjust for its own width */
+        }
+
+
+        /* Animate on Scroll */
+        .animate-on-scroll {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Rotating image during scroll */
+        .rotate-on-scroll {
+            transform: rotate(0deg);
+            transition: transform 0.5s ease-out;
+        }
+
+        .image-item img {
+            margin-bottom: 30%;
+            width: 100%;
+            /* Make the image responsive */
+            max-width: 800px;
+            /* Set a maximum width */
+            height: auto;
+            /* Maintain aspect ratio */
+            border-radius: 150px;
+        }
+ 
